@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Quicksand:wght@300;500&family=Rajdhani:wght@300;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    section {
+        @apply w-full;
+    }
+}
+@layer components {
+    .active {
+        @apply text-purple-800 font-semibold;
+    }
+}
+@layer utilities {
+    .nav-item {
+        color: #27ae60;
+        transition: 0.2s;
+    }
+}
