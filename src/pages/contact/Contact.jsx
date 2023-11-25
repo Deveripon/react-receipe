@@ -1,9 +1,9 @@
-import Header from "../../components/header/Header";
-
 const Contact = () => {
     return (
         <>
-            <Header />
+            <section className="home-section bg-gray-800 h-screen  grid justify-center content-center">
+                <h3 className="text-cyan-500 text-4xl">Contact</h3>
+            </section>
         </>
     );
 };

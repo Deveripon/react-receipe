@@ -15,27 +15,27 @@ const Header = () => {
                     <div className="menu font-heading font-bold text-xl">
                         <ul className="flex gap-10">
                             <li>
-                                <NavLink className="nav-item hover:text-green-700" to="/">
+                                <NavLink className="nav-item hover:text-purple-500" to="/">
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-green-700" to="/blog">
+                                <NavLink className="nav-item hover:text-purple-500" to="/blog">
                                     Blog
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-green-700" to="/about">
+                                <NavLink className="nav-item hover:text-purple-500" to="/about">
                                     About
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-green-700" to="/contact">
+                                <NavLink className="nav-item hover:text-purple-500" to="/contact">
                                     Contct
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-green-700" to="/receipe">
+                                <NavLink className="nav-item hover:text-purple-500" to="/receipe">
                                     Receipe
                                 </NavLink>
                             </li>
