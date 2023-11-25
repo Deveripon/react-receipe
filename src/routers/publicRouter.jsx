@@ -6,6 +6,10 @@ import Receipe from "../pages/Receipe/Receipe";
 import Singlle from "../single/Singlle";
 import Auth from "../pages/admin/login/Auth";
 import Layout from "../layouts/Layout";
+import Documentation from "../pages/about/pages/Documentation";
+import Team from "../pages/about/pages/Team";
+import Mentor from "../pages/about/pages/Mentor";
+import Abouts from "../pages/about/pages/Abouts";
 
 const publicRoutes = [
     {
@@ -18,6 +22,24 @@ const publicRoutes = [
             {
                 path: "/about",
                 element: <About />,
+                children: [
+                    {
+                        path: "documentation",
+                        element: <Documentation />,
+                    },
+                    {
+                        path: "team",
+                        element: <Team />,
+                    },
+                    {
+                        path: "mentors",
+                        element: <Mentor />,
+                    },
+                    {
+                        path: "about",
+                        element: <Abouts />,
+                    },
+                ],
             },
             {
                 path: "/blog",

@@ -1,9 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { getActiveRoute } from "../../helpers/helper";
 
 const Header = () => {
+    const location = useLocation();
     return (
         <>
-            <section className="header-section shadow-md">
+            <section className="header-section shadow-md bg-gray-800">
                 <div className="container m-auto flex justify-between items-center py-5">
                     <div className="brand">
                         <Link to="/">
@@ -15,27 +17,55 @@ const Header = () => {
                     <div className="menu font-heading font-bold text-xl">
                         <ul className="flex gap-10">
                             <li>
-                                <NavLink className="nav-item hover:text-purple-500" to="/">
+                                <NavLink
+                                    className={`nav-item hover:text-purple-500 ${
+                                        location.pathname === "/" ? "nav-active" : ""
+                                    }`}
+                                    to="/">
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-purple-500" to="/blog">
+                                <NavLink
+                                    className={
+                                        getActiveRoute(location.pathname, "blog")
+                                            ? "nav-active"
+                                            : "" + `nav-item hover:text-purple-500`
+                                    }
+                                    to="/blog">
                                     Blog
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-purple-500" to="/about">
+                                <NavLink
+                                    className={`nav-item hover:text-purple-500 ${
+                                        getActiveRoute(location.pathname, "about")
+                                            ? "nav-active"
+                                            : ""
+                                    }`}
+                                    to="/about">
                                     About
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-purple-500" to="/contact">
+                                <NavLink
+                                    className={`nav-item hover:text-purple-500 ${
+                                        getActiveRoute(location.pathname, "contact")
+                                            ? "nav-active"
+                                            : ""
+                                    }`}
+                                    to="/contact">
                                     Contct
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-item hover:text-purple-500" to="/receipe">
+                                <NavLink
+                                    className={`nav-item hover:text-purple-500 ${
+                                        getActiveRoute(location.pathname, "receipe")
+                                            ? "nav-active"
+                                            : ""
+                                    }`}
+                                    to="/receipe">
                                     Receipe
                                 </NavLink>
                             </li>
